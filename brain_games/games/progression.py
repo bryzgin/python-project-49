@@ -1,25 +1,31 @@
 import random
 from brain_games.engine import run_game
 
-RULES = """Answer "yes" if given number is prime. Otherwise answer "no"."""
+RULES = "What number is missing in the progression?"
 
 
-def is_prime(number):
-    if number < 2:
-        return False
-    
-    for i in range(2, number):
-        if number % i == 0:
-            return False
-            
-    return True
+def make_progression(start, step, length):
+    progression = []
+    for index in range(length):
+        current_element = start + index * step
+        progression.append(str(current_element))
+    return progression
 
 
 def generate_round():
-    number = random.randint(1, 100)
-    question = str(number)
+    start = random.randint(1, 20)
+    step = random.randint(1, 10)
+    length = random.randint(5, 10)
     
-    correct_answer = "yes" if is_prime(number) else "no"
+    progression = make_progression(start, step, length)
+    
+    hidden_index = random.randint(0, len(progression) - 1)
+    
+    correct_answer = progression[hidden_index]
+    
+    progression[hidden_index] = ".."
+    
+    question = " ".join(progression)
     
     return question, correct_answer
 
