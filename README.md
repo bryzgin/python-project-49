@@ -1,10 +1,54 @@
-# Hexlet Project: Brain Games
+<p align="center"><a href="https://github.com"><img src="https://github.com/workflows/hexlet-check.yml/badge.svg" alt="Actions Status" /></a><a href="https://sonarcloud.io"><img src="https://sonarcloud.io" alt="Maintainability Rating" /></a></p>
 
-<p align="center">
-  <a href="https://github.com/bryzgin/python-project-49/actions">
-    <img src="https://github.com/bryzgin/python-project-49/actions/workflows/hexlet-check.yml/badge.svg" alt="Actions Status" />
-  </a>
-  <a href="https://sonarcloud.io/summary/new_code?id=bryzgin_python-project-49">
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=bryzgin_python-project-49&metric=sqale_rating" alt="Maintainability Rating" />
-  </a>
-</p>
+# Brain Games
+
+Комплект консольных игр, разработанных в рамках учебного проекта платформы Hexlet. Пакет включает в себя пять математических викторин. В рамках каждого игрового сеанса пользователю предлагается ответить на три случайных вопроса. Для успешного завершения игры необходимо дать три верных ответа подряд. В случае ошибки сессия завершается с выводом корректного ответа.
+
+### Состав пакета:
+* **brain-even** — проверка числа на четность.
+* **brain-calc** — вычисление результатов арифметических выражений.
+* **brain-gcd** — нахождение наибольшего общего делителя двух чисел.
+* **brain-progression** — определение пропущенного элемента в арифметической прогрессии.
+* **brain-prime** — проверка числа на то, является ли оно простым.
+
+## Минимальные требования
+
+* Python версии 3.10 или выше
+* Пакетный менеджер uv
+
+## Инструкция по установке
+
+Пакет конфигурируется как автономная утилита командной строки. Установка с помощью `uv tool` позволяет выполнять команды напрямую, минуя использование префиксов виртуального окружения.
+
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com
+   ```
+2. Перейдите в каталог проекта:
+   ```bash
+   cd python-project-49
+   ```
+3. Выполните установку пакета в систему:
+   ```bash
+   uv tool install .
+   ```
+
+## Запуск приложений
+
+После завершения установки вызов утилит осуществляется напрямую через терминал:
+
+```bash
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```
+
+## Демонстрация работы
+
+В данном разделе представлены записи консольных сессий, демонстрирующие установку приложения, а также примеры игрового процесса с успешным и неудачным исходом.
+
+### 1. Процесс установки
+Демонстрация развертывания проекта и глобальной установки через команду `uv tool install .`:  
+[![asciicast](https://asciinema.org)](https://asciinema.org/a/MfJEL8zfHgfGLiTy)
